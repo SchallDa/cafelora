@@ -1,4 +1,5 @@
-
+import { HomePage } from './pages/HomePage';
+// import { OrderPage } from './pages/OrderPage';
 import './style.css';
 
 console.log('funguju!');
@@ -11,3 +12,9 @@ console.log('funguju!');
 // pageElement.append(Header(), main, Footer());
 
 // document.querySelector('#app').append(pageElement);
+
+const { pathname } = window.location;
+
+if (pathname === '/') {
+  document.querySelector('#app').append(HomePage());
+}
